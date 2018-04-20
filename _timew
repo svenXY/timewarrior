@@ -3,6 +3,7 @@
 # Bash completion for TimeWarrior
 #
 # Copyright (C) 2017  Thomas Lauf
+# taken from https://github.com/lauft/timew-bashcompletion
 #
 function __get_commands()
 {
