@@ -64,8 +64,11 @@ function _timew()
     continue|delete|join|lengthen|move|shorten|split)
       wordlist=$( __get_ids )
       ;;
-    export|gaps|start|stop|summary|tags|track)
+    export|gaps|start|stop|tags|track)
       wordlist=$( __get_tags )
+      ;;
+    summary)
+      wordlist="$( __get_tags ) :yesterday :day :week :month :quarter :year :lastweek :lastmonth :lastquarter :lastyear today"
       ;;
     tag|untag)
       if __is_entering_id ; then
