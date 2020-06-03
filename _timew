@@ -7,12 +7,12 @@
 #
 function __get_commands()
 {
-  echo "cancel config continue day delete diagnostics export extensions gaps get help join lengthen month move report shorten show split start stop summary tag tags track untag week"
+  echo "annotate cancel config continue day delete diagnostics end export extensions fill gaps get help join lengthen modify month move report resize shorten show split start stop summary tag tags track undo untag week"
 }
 
 function __get_options()
 {
-  echo "--help --verbose --version"
+  echo "--help --version"
 }
 
 function __get_ids()
@@ -58,14 +58,17 @@ function _timew()
   first="${COMP_WORDS[1]}"
 
   case "${first}" in
-    cancel|config|diagnostics|day|extensions|get|month|show|week)
+    cancel|config|diagnostics|day|extensions|get|month|show|undo|week)
       wordlist=""
       ;;
-    continue|delete|join|lengthen|move|shorten|split)
+    continue|delete|join|lengthen|modify|move|resize|shorten|split)
       wordlist=$( __get_ids )
       ;;
     export|gaps|start|stop|tags|track)
       wordlist=$( __get_tags )
+      ;;
+    modify)
+      wordlist="start end"
       ;;
     summary)
       wordlist="$( __get_tags ) :yesterday :day :week :month :quarter :year :lastweek :lastmonth :lastquarter :lastyear today"
