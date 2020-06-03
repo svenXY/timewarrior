@@ -61,7 +61,7 @@ function _timew()
     cancel|config|diagnostics|day|extensions|get|month|show|undo|week)
       wordlist=""
       ;;
-    continue|delete|join|lengthen|modify|move|resize|shorten|split)
+    continue|delete|join|lengthen|move|resize|shorten|split)
       wordlist=$( __get_ids )
       ;;
     export|gaps|start|stop|tags|track)
