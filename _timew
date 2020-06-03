@@ -68,7 +68,13 @@ function _timew()
       wordlist=$( __get_tags )
       ;;
     modify)
-      wordlist="start end"
+      if __is_entering_id ; then
+        wordlist=$( __get_ids )
+      elif __has_entered_id ; then
+        wordlist=$( '<[date]time>' )
+      else
+        wordlist="start end"
+      fi
       ;;
     summary)
       wordlist="$( __get_tags ) :yesterday :day :week :month :quarter :year :lastweek :lastmonth :lastquarter :lastyear today"
