@@ -22,3 +22,34 @@ alias twmo='timew modify end'
 alias twrs='timew resize'
 alias twz='timew undo'
 alias twd='timew delete'
+
+# twct == timewarrior change tag
+function twct(){
+    ITEMS=()
+    TAGS=()
+    for a in "$@"; do
+        case $a in
+            @*)
+                ITEMS+=("$a")
+                ;;
+            *)
+                TAGS+=("$a")
+                ;;
+        esac
+    done
+
+    if [ $#TAGS -ne 2 ]; then
+        echo 'Too few or too many tags'
+        return
+    fi
+    if [ $#ITEMS -lt 1 ]; then
+        echo 'To few ids'
+        return
+    fi
+
+    for item in "$ITEMS"; do
+        timew untag $item $TAGS[1]
+        timew tag $item $TAGS[-1]
+    done
+    timew summary
+}
