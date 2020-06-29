@@ -44,6 +44,8 @@ History
 ------------------------------------------------------------------------------
 
 * April 2018: Sven Hergenhahn put this together
+* June 2020: added more aliases and functions
+             added a license (MIT)
 
 ------------------------------------------------------------------------------
 [1]: https://timewarrior.net/
