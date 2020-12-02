@@ -9,6 +9,10 @@ alias tws='timew summary'
 alias twsi='timew summary :ids'
 alias twsy='timew summary :yesterday'
 alias twsw='timew summary :week'
+alias twds='timew day summary'
+alias twws='timew week summary'
+alias twms='timew month summary'
+
 
 alias twa='timew start'
 alias two='timew stop'
