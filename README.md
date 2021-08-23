@@ -13,7 +13,7 @@ Requirements
 Install
 ------------------------------------------------------------------------------
 
-Using [Oh-my-zsh][5]:
+### Using [Oh-my-zsh][5]:
 
 1. Clone this repository in oh-my-zsh's plugins directory:
 
@@ -26,6 +26,10 @@ Using [Oh-my-zsh][5]:
 3. Source `~/.zshrc`  to take changes into account:
 
         source ~/.zshrc
+        
+### other zsh plugin managers
+
+Please refer to the respective documentation on how to install a plugin from guthub
 
 Usage
 ------------------------------------------------------------------------------
